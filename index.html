@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanTech Ventures</title>
+    <meta id="meta-description" name="description" content="Connecting capital, infrastructure and projects.">
+    <meta name="keywords" content="Venture Capital,PropTech,Building Automation,City Operating System,Construction,Design & Planning,Logistics & Retail,Mobility,Physical Safety,Real Estate Platforms,Utility & Data Grids">
+    <meta name="author" content="UrbanTech Ventures">
+    <meta name="theme-color" content="#10b981" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/AMG22075/urbantech/refs/heads/main/img/logo_square.png">
+    <link rel="canonical" href="https://urbantech.ventures">
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');  
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+      * {
+      font-family: 'Frank Ruhl Libre', serif;
+      }
+      .roboto {
+      font-family: 'Roboto Mono', sans-serif;  
+      }      /* Flag Styling */
+      .flag-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 5px;
+      }
+      .flag-icon {
+      width: 20px;
+      height: 15px;
+      display: inline-block;
+      background-size: cover;
+      cursor: pointer;
+      border-radius: 3px;
+      }
+      .tooltip {
+      position: absolute;
+      background-color: black;
+      color: white;
+      font-size: 12px;
+      font-family: '', serif; 
+      padding: 3px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      }
+      .flag-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+      }
+      @media (hover: hover) {
+      .flag-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+      display: none;  
+      }
+      }
+      @media (max-width: 768px) {
+      .tooltip {
+      display: none;
+      }
+      }
+      /* Arrow Animation on Hover */
+      .button-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease-in-out;
+      }
+      .button:hover .button-text svg {
+      transform: translateX(5px);
+      }
+    </style>
+  </head>
+  <body class="relative flex flex-col items-center justify-center min-h-screen bg-[#F3F4F6] bg-opacity-1 text-black px-10 py-14">
+    <header class="absolute top-6 left-6">
+       <p class="text-lg font-bold text-[#14B8A6] text-left roboto leading-none">
+        URBANTECH<br>VENTURES
+      </p>
+    </header>
+    <div class="absolute top-2 right-6 flex gap-0.5">
+      <div class="flag-container">
+        <p class="flag-icon text-xs" data-lang="en" alt="English" >EN</p>
+        <span class="tooltip">English</span>
+      </div>
+      <div class="flag-container">
+        <p class="flag-icon text-xs" data-lang="ja" alt="日本語" >JA</p>
+        <span class="tooltip">日本語</span>
+      </div>
+    </div>
+    <div class="flex flex-col items-center gap-6 mt-16 mb-24 w-full max-w-[450px]">
+      <p id="text_1" class="text-lg p-3 text-left w-full rounded-lg">Connecting capital, infrastructure and projects in Tokyo. A venture platform that co-creates smart city solutions by integrating digital and physical spaces to address Japan’s urban challenges at scale.<br>
+      <br><p id="text_2" class="font-bold text-left">Coming Soon...</p>  
+      </p>
+    </div>
+    <footer class="mt-16 flex flex-col items-center gap-2">
+      <p class="text-xs text-[#000] mt-4">&copy; UrbanTech Ventures, <span id="currentYear"></span></p>
+      <p id="locationText" class="text-xs">Tokyo, Japan</p>
+    </footer>
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+      
+      function changeLanguage(lang) {
+          const translations = {
+              en: { text_1: "Connecting capital, infrastructure and projects in Tokyo. A venture platform that co-creates smart city solutions by integrating digital and physical spaces to address Japan’s urban challenges at scale.", text_2: "Coming soon..", locationText: "Tokyo, Japan" },
+              ja: { text_1: "東京の資本、インフラ、プロジェクトを繋ぐ。デジタル空間とリアル空間を融合させ、スマートシティソリューションを共創することで、日本の都市課題に大規模に取り組むベンチャープラットフォーム。", text_2: "近日公開...", locationText: "東京、日本" },
+          };
+      
+          document.getElementById("text_1").textContent = translations[lang].text_1;
+          document.getElementById("text_2").textContent = translations[lang].text_2;
+          document.getElementById("locationText").textContent = translations[lang].locationText;
+          localStorage.setItem("selectedLang", lang);
+      }
+      
+      const browserLang = navigator.language.startsWith("en") ? "en" : navigator.language.startsWith("ja") ? "ja" : "en";
+      changeLanguage(localStorage.getItem("selectedLang") || browserLang);
+      
+      document.querySelectorAll(".flag-icon").forEach(flag => flag.addEventListener("click", () => changeLanguage(flag.dataset.lang)));
+    </script>
+  </body>
+</html>
+
+
