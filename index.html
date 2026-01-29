@@ -81,30 +81,28 @@
       }
     </style>
   </head>
-  <body class="relative flex flex-col items-center justify-center min-h-screen bg-[#F3F4F6] bg-opacity-1 text-black px-10 py-14">
-    <header class="absolute top-6 left-6">
-       <p class="text-lg font-bold text-[#14B8A6] text-left roboto leading-none">
-        URBANTECH<br>VENTURES
-      </p>
-    </header>
-    <div class="absolute top-2 right-6 flex gap-0.5">
+  <body class="items-center justify-center min-h-screen bg-[#F3F4F6] bg-opacity-1 text-black px-10 py-8">
+    
+    <header class="w-full flex justify-between mb-24">
+    <p class="text-xl font-bold text-[#14B8A6] text-left roboto leading-none">URBANTECH<br>VENTURES</p>
+     <div class="gap-0.5">
       <div class="flag-container">
-        <p class="flag-icon text-xs" data-lang="en" alt="English" >EN</p>
+        <p class="flag-icon text-sm" data-lang="en" alt="English" >EN</p>
         <span class="tooltip">English</span>
       </div>
       <div class="flag-container">
-        <p class="flag-icon text-xs" data-lang="ja" alt="日本語" >JA</p>
+        <p class="flag-icon text-sm" data-lang="ja" alt="日本語" >JA</p>
         <span class="tooltip">日本語</span>
       </div>
+     </div>
+    </header>
+    <div class="flex flex-col text-xl text-left items-center gap-12 mt-2 mb-24 w-full max-w-[450px]">
+      <p id="text_1" class="w-full">Connecting capital, infrastructure and projects in Tokyo. A venture platform that co-creates smart city solutions by integrating digital and physical spaces to address Japan’s urban challenges at scale.<br><br></p>
+      <p id="text_2" class="font-bold w-full">Coming Soon...</p>
     </div>
-    <div class="flex flex-col items-center gap-6 mt-16 mb-24 w-full max-w-[450px]">
-      <p id="text_1" class="text-lg p-3 text-left w-full rounded-lg">Connecting capital, infrastructure and projects in Tokyo. A venture platform that co-creates smart city solutions by integrating digital and physical spaces to address Japan’s urban challenges at scale.<br>
-      <br><p id="text_2" class="font-bold text-left">Coming Soon...</p>  
-      </p>
-    </div>
-    <footer class="mt-16 flex flex-col items-center gap-2">
-      <p class="text-xs text-[#000] mt-4">&copy; UrbanTech Ventures, <span id="currentYear"></span></p>
-      <p id="locationText" class="text-xs">Tokyo, Japan</p>
+    <footer class="mt-48 flex flex-col items-center">
+      <p class="text-sm">&copy; UrbanTech Ventures, <span id="currentYear"></span></p>
+      <p id="locationText" class="text-sm">Tokyo, Japan</p>
     </footer>
     <script>
       document.getElementById("currentYear").textContent = new Date().getFullYear();
@@ -112,7 +110,7 @@
       function changeLanguage(lang) {
           const translations = {
               en: { text_1: "Connecting capital, infrastructure and projects in Tokyo. A venture platform that co-creates smart city solutions by integrating digital and physical spaces to address Japan’s urban challenges at scale.", text_2: "Coming soon..", locationText: "Tokyo, Japan" },
-              ja: { text_1: "東京の資本、インフラ、プロジェクトを繋ぐ。デジタル空間とリアル空間を融合させ、スマートシティソリューションを共創することで、日本の都市課題に大規模に取り組むベンチャープラットフォーム。", text_2: "近日公開...", locationText: "東京、日本" },
+              ja: { text_1: "東京の資本、インフラ、プロジェクトを繋ぐ。デジタル空間とリアル空間を融合させ、スマートシティソリューションを共創することで、日本の都市課題に大規模に取り組むベンチャープラットフォーム。", text_2: "近日公開..", locationText: "東京、日本" },
           };
       
           document.getElementById("text_1").textContent = translations[lang].text_1;
