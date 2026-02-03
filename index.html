@@ -33,10 +33,10 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Y5KCT72LP"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6Y5KCT72LP');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6Y5KCT72LP');
     </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');  
@@ -46,35 +46,78 @@
       }
       .roboto {
       font-family: 'Roboto Mono', sans-serif;  
-      }      /* Flag Styling */
+      }      
     </style>
   </head>
-  <body class="grid content-between items-center min-h-screen bg-[#F3F4F6] bg-opacity-1 text-black cursor-default">
-    
-    <header class="w-full flex justify-between items-center select-none bg-black px-8 py-4">
-    <p class="select-none text-xl font-bold text-teal-300 text-left roboto leading-none">URBANTECH<br>VENTURES</p>
-     <div class="flex flex-row gap-4">
-        <p class="flag-icon cursor-pointer text-white text-sm hover:text-teal-300 transition duration-300 ease-in-out" data-lang="en" alt="English" >EN</p>
-        <p class="flag-icon cursor-pointer text-white text-sm hover:text-teal-300 transition duration-300 ease-in-out " data-lang="ja" alt="日本語" >JA</p>
-     </div>
+  <body class="grid content-between items-center min-h-screen bg-stone-100 bg-opacity-1 text-black cursor-default">
+    <header class="w-full flex justify-end items-center select-none px-12 py-8 mb-12">
+      <p class="hidden select-none text-xl font-bold text-teal-300 text-left roboto leading-none">URBANTECH<br>VENTURES</p>
+      <div class="hidden flex flex-row gap-4 text-sm">
+        <p class="flag-icon cursor-pointer" data-lang="en" alt="English" >EN</p>
+        <p class="flag-icon cursor-pointer" data-lang="ja" alt="日本語" >JA</p>
+      </div>
     </header>
-    <div class="flex flex-col items-center text-xl text-center p-6 ">
-      <p id="text_1" class="sm:w-1/2 w-full">Connecting capital, infrastructure and projects in Tokyo. A venture platform that co-creates smart city solutions by integrating digital and physical spaces to address Japan’s urban challenges at scale.<br><br></p>
+    <div class="flex flex-col text-left place-self-center items-center text-xl text-left p-8 sm:w-[800px] w-full ">
+      <p class="select-none text-5xl font-bold text-teal-500 w-full sm:text-center text-left roboto">URBANTECH VENTURES</p>
+      <div class="w-[600px] flex sm:flex-row flex-col gap-y-3 justify-evenly mt-12 select-none font-light text-sm text-center text-stone-700">
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">building automation</p>
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">city operating systems</p>
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">construction </p>
+      </div>
+      <div class="w-[600px] flex sm:flex-row flex-col gap-y-3 justify-evenly mt-3 select-none font-light text-sm text-center text-stone-700">
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">design & planning</p>
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">logistics & retail</p>
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">mobility</p>
+      </div>
+      <div class="w-[600px] flex sm:flex-row flex-col gap-y-3 justify-evenly mb-12 mt-3 select-none font-light text-sm text-center text-stone-700">
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">physical safety</p>
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">real estate platforms</p>
+        <p class="roboto bg-stone-200 place-self-start sm:place-self-center px-3 py-1.5 rounded-full  ">utility & data grids</p>
+      </div>
+      <div class="text-lg space-y-4">
+        <p id="text_1" class=""></p>
+        <p id="text_2"></p>
+        <ul class="list-[&apos;◼_&apos;] list-inside space-y-2 ">
+          <li><span class="font-bold">Venture clienting: </span><span id="text_3"></span></li>
+          <li><span class="font-bold">Go-To-Market: </span></span><span id="text_4"></span></li>
+          <li><span class="font-bold">Industry Access Labs: </span><span id="text_5"></span></li>
+        </ul>
+        <p class="pt-8">Follow us on <a class="cursor-pointer underline decoration-dotted" href="https://www.linkedin.com/company/urban-tech-ventures/">LinkedIn</a> for updates.</p>
+        <div>
+          <div class="hidden mt-6">Partners:<br>
+            <a class="cursor-pointer underline decoration-dotted" href="https://www.linkedin.com/in/alberto-saruggia/">Alberto MG Saruggia</a>&nbsp;&nbsp;
+          </div>
+        </div>
+      </div>
     </div>
-    <footer class="flex flex-col items-center p-6">
-      <p class="text-xs text-stone-400">&copy; UrbanTech Ventures <span id="currentYear"></span></p>
-      <p id="locationText" class="text-xs text-stone-400">Tokyo Japan</p>
+    <footer class="flex flex-col items-center text-stone-400 p-8 text-sm mt-12 font-base ">
+      <p class="roboto uppercase">UrbanTech Ventures <span class="text-base roboto" >&copy;</span> <span class="roboto" id="currentYear"></span></p>
+      <p id="locationText" class="hidden text-xs text-stone-400">Tokyo Japan</p>
     </footer>
     <script>
       document.getElementById("currentYear").textContent = new Date().getFullYear();
       
       function changeLanguage(lang) {
           const translations = {
-              en: { text_1: "Connecting capital, infrastructure and projects in Tokyo. A venture platform that co-creates smart city solutions by integrating digital and physical spaces to address Japan’s urban challenges at scale.", locationText: "Tokyo Japan" },
-              ja: { text_1: "東京の資本、インフラ、プロジェクトを繋ぐ。デジタル空間とリアル空間を融合させ、スマートシティソリューションを共創することで、日本の都市課題に大規模に取り組むベンチャープラットフォーム。", locationText: "東京　日本" },
+              en: { text_1: "UrbanTech Ventures is a venture commercialization platform focused on built environment technologies. We engage corporates, startups and institutions to integrate digital and physical solutions and address Japan’s urban challenges at scale.",
+                   text_2: "Our approach is bottom-up and purpose-built for smart cities, starting from real user needs. Projects are identified, validated, and deployed through direct collaborations with industry stakeholders. Commercial relationships are structured to distribute revenues based on measurable outcomes.",
+                   text_3: "Corporate procurement and pilot validation of startup solutions.",
+                   text_4: "Advisory services enabling startup commercialization and adoption. Currently working on AI-powered construction safety and 5G telecom infrastructure.",
+                   text_5: "Curated workshops and seminars with institutional partners. Recently delivered a 3-day B2B accelerator sponsored by the Italian Trade Agency. ", 
+                 },
+              ja: { text_1: "UrbanTech Venturesは、建築や都市環境に関わる技術の事業化を支援する基盤です。企業、新興企業、研究機関などと連携し、情報技術と実空間の仕組みを組み合わせ、日本の都市が抱える課題の解決を大きな規模で進めています。",
+              text_2: "スマートシティの実現に向け、現場から積み上げる手法を採用しています。建物の自動管理、物流と小売、移動手段、安全対策、社会基盤や情報網といった分野における実際の利用者の課題から出発します。事業は産業関係者との直接的な協働を通じて選定・検証され、社会への導入が進められます。また、成果を数値で評価し、それに基づいて収益を関係者に配分する仕組みを構築します。",
+               text_3: "企業向けにベンチャークライアント制度を構築し、必要に応じた実証試験のために新興企業を選定します。",
+                text_4: "投資を受けた新興企業や成長企業が日本で顧客を獲得できるよう、直接紹介や新規開拓を含めて支援します。",
+                text_5: "", 
+              },
           };
       
           document.getElementById("text_1").textContent = translations[lang].text_1;
+          document.getElementById("text_2").textContent = translations[lang].text_2;
+          document.getElementById("text_3").textContent = translations[lang].text_3;
+          document.getElementById("text_4").textContent = translations[lang].text_4;
+          document.getElementById("text_5").textContent = translations[lang].text_5;
           document.getElementById("locationText").textContent = translations[lang].locationText;
           localStorage.setItem("selectedLang", lang);
       }
@@ -83,6 +126,10 @@
       changeLanguage(localStorage.getItem("selectedLang") || browserLang);
       
       document.querySelectorAll(".flag-icon").forEach(flag => flag.addEventListener("click", () => changeLanguage(flag.dataset.lang)));
+      
+      
+      document.getElementById("text_1").textContent = translations[lang].text_1;
+      
     </script>
   </body>
 </html>
