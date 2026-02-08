@@ -43,37 +43,48 @@
       @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
       * {
       font-family: 'Source Serif 4', serif;
+      color: #000000;
+      cursor: default;
       }
       .grotesk {
       font-family: 'Schibsted Grotesk', sans-serif;  
+      font-weight: 500;
+      font-size: 0.875rem;
+      letter-spacing: 0.025em;
+      color: #78716c;
+      line-height: calc(1.25 / 0.875);
+      user-select: none;
       }  
+      .pill {
+      background-color: #e7e5e4;  
+      padding-inline: 1em;
+      padding-block: 0.3em;
+      border-radius: calc(infinity * 1px);
+      text-align: center;
+      }
     </style>
   </head>
-  <body class="grid content-between items-center min-h-screen bg-stone-100 bg-opacity-1 text-black cursor-default">
-    <header class="w-full flex justify-end items-center select-none px-12 py-8 mb-12">
-      <div class="flex flex-row gap-4 text-sm text-stone-500 font-medium">
+  <body class="grid content-between items-center min-h-screen bg-stone-100">
+    <header class="w-full flex justify-end items-center px-12 py-8 mb-12">
+      <div class="flex flex-row gap-4 text-sm">
         <p class="grotesk lang_icon cursor-pointer" data-lang="en" alt="English">EN</p>
         <p class="grotesk lang_icon cursor-pointer" data-lang="ja" alt="日本語">JA</p>
       </div>
     </header>
-    <div class="flex flex-col text-left place-self-center items-center text-xl text-left p-8 sm:w-[800px] w-full ">
-      <p class="select-none text-5xl font-semibold text-teal-600 w-full tracking-widest text-left grotesk uppercase">urbantech ventures</p>
-      <div class="w-full flex sm:flex-row flex-col gap-3 mt-12 select-none font-medium text-sm text-center tracking-wide text-stone-500">
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">building automation</p>
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">city operating systems</p>
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">construction </p>
+    <div class="flex flex-col place-self-center items-center p-8 sm:w-[800px] w-full ">
+      <p class="text-5xl font-semibold text-teal-600 tracking-widest sm:text-center text-left mb-12 grotesk uppercase">urbantech ventures</p>
+      <div class="flex flex-col sm:grid grid-cols-3 gap-y-3 place-self-start sm:place-self-center">
+        <p class="grotesk pill place-self-start sm:place-self-end">building decarbonization</p>
+        <p class="grotesk pill place-self-start sm:place-self-center">construction automation</p>
+        <p class="grotesk pill place-self-start sm:place-self-start">assisted living</p>
+        <p class="grotesk pill place-self-start sm:place-self-end">last-mile delivery</p>
+        <p class="grotesk pill place-self-start sm:place-self-center">infrastructure maintenance</p>
+        <p class="grotesk pill place-self-start sm:place-self-start">distributed grids</p>
+        <p class="grotesk pill place-self-start sm:place-self-end">materials recycling</p>
+        <p class="grotesk pill place-self-start sm:place-self-center">city operating systems</p>
+        <p class="grotesk pill place-self-start sm:place-self-start">autonomous regional mobility</p>
       </div>
-      <div class="w-full flex sm:flex-row flex-col gap-3 mt-3 select-none font-medium text-sm text-center text-stone-500">
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">design & planning</p>
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">logistics & retail</p>
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">mobility</p>
-      </div>
-      <div class="w-full flex sm:flex-row flex-col gap-3 mb-12 mt-3 select-medium font-medium text-sm text-center text-stone-500">
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">physical safety</p>
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">real estate platforms</p>
-        <p class="grotesk bg-stone-200 place-self-start px-3 py-1.5 rounded-full">utility & data grids</p>
-      </div>
-      <div class="text-lg space-y-4">
+      <div class="text-lg space-y-4 mt-12">
         <p id="text_1" class=""></p>
         <p id="text_2"></p>
         <ul class="list-[&apos;◼_&apos;] list-inside space-y-2 ">
@@ -89,8 +100,8 @@
         </div>
       </div>
     </div>
-    <footer class="flex flex-col items-center text-stone-400 p-8 text-sm mt-12">
-      <p class="grotesk">Urbantech Ventures &copy; <span class="grotesk" id="currentYear"></span></p>
+    <footer class="flex flex-col items-center p-8 mt-12">
+      <p class="grotesk font-normal text-stone-400">Urbantech Ventures &copy; <span class="grotesk font-normal text-stone-400" id="currentYear"></span></p>
       <p id="locationText" class="hidden text-xs text-stone-400">Tokyo Japan</p>
     </footer>
     <script>
@@ -98,7 +109,7 @@
       
       function changeLanguage(lang) {
           const translations = {
-              en: { text_1: "Urbantech Ventures is a venture commercialization platform focused on built environment technologies. We engage corporates, startups and institutions to integrate digital and physical solutions and address Japan’s urban challenges at scale.",
+              en: { text_1: "Urbantech Ventures is a venture platform focused on built environment technologies. We engage corporates, startups and institutions to integrate digital and physical solutions to address Japan’s urban challenges at scale.",
                    text_2: "Our approach is bottom-up and purpose-built for smart cities, starting from real user needs. Projects are identified, validated, and deployed through direct collaborations with industry stakeholders, while commercial relationships are structured to distribute revenues based on measurable outcomes.",
                    text_3: "Corporate procurement and pilot validation of startup solutions.",
                    text_4: "Advisory services enabling startup commercialization and adoption. Currently working on AI-powered construction safety and 5G telecom infrastructure.",
